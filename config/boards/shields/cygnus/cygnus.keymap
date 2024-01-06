@@ -8,15 +8,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-
+/ {
 keymap {
 	compatible = "zmk,keymap";
 	
 	default_layer {
 		bindings = <
 			&kp Q 	   	 &kp W 		&kp E		&kp R		&kp T				&kp Y 		&kp U		&kp I		&kp O		&kp P
-			&kp A            &kp S 		&kp D		&kp F	 	&kp G		 		&kp H 		&kp J		&kp K		&kp L 		&hm RCTRL SEMI
-			&kp Z            &kp X		&kp C 		&kp V 		&kp B   			&kp N		&kp M  		&kp COMMA 	&kp PERIOD	&hs RSHIFT SLASH
+			&kp A            &kp S 		&kp D		&kp F	 	&kp G		 		&kp H 		&kp J		&kp K		&kp L 		&kp SEMICOLON
+			&kp Z            &kp X		&kp C 		&kp V 		&kp B   			&kp N		&kp M  		&kp COMMA 	&kp DOT 	&kp FSLH
 							&kp BSPC	&lt 1 DEL	&kp LALT			&kp RALT	&lt 2 RET	&kp SPACE	 
 		>;
 	};
