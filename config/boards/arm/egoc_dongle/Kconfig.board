@@ -3,6 +3,6 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-config BOARD_EGOC
-    bool "egoc"
+config BOARD_EGOC_DONGLE
+    bool "egoc_dongle"
     depends on SOC_NRF52840_QIAA

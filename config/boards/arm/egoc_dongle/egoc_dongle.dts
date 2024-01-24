@@ -8,15 +8,14 @@
 #include <nordic/nrf52840_qiaa.dtsi>
 
 / {
-    model = "egoc";
-    compatible = "egokb,egoc";
+    model = "egoc_dongle";
+    compatible = "egokb,egoc_dongle";
 
     chosen {
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zephyr,console = &cdc_acm_uart;
-        zmk,battery = &vbatt;
     };
 
     leds {
@@ -27,18 +26,9 @@
         };
     };
 
-    ext-power {
-        compatible = "zmk,ext-power-generic";
-        label = "EXT_POWER";
-        control-gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
-    };
-
     vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        label = "BATTERY";
-        io-channels = <&adc 2>;
-        output-ohms = <2000000>;
-        full-ohms = <(2000000 + 820000)>;
+       compatible = "zmk,battery-nrf-vddh";
+		label = "BATTERY";
     };
 };
 
@@ -56,18 +46,6 @@
 
 &gpio1 {
     status = "okay";
-};
-
-&i2c0 {
-    compatible = "nordic,nrf-twi";
-    sda-pin = <30>;
-    scl-pin = <31>;
-};
-
-&uart0 {
-    compatible = "nordic,nrf-uarte";
-    tx-pin = <6>;
-	rx-pin = <8>;
 };
 
 &usbd {
