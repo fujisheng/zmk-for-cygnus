@@ -1,40 +1,24 @@
 if SHIELD_CYGNUS_DONGLE || SHIELD_CYGNUS_LEFT || SHIELD_CYGNUS_RIGHT
 
-config ZMK_BLE
-	default y
+	config ZMK_BLE
+		default y
 
-config ZMK_KEYBOARD_NAME
-	default "cygnus"
+	config ZMK_KEYBOARD_NAME
+		default "cygnus"
 
-config ZMK_SPLIT
-	default y
+	config ZMK_SPLIT
+		default y
 
 endif
 
 if SHIELD_CYGNUS_DONGLE
 
-config ZMK_USB
-	default y
+	config ZMK_USB
+		default y
 
-config ZMK_SPLIT_ROLE_CENTRAL
-	default y
+	config ZMK_SPLIT_ROLE_CENTRAL
+		default y
 
-config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-	default 2
-
-config BT_MAX_PAIRED
-	default 7
-
-config BT_MAX_CONN
-	default 7
-
-config ZMK_SPLIT_BLE_PREF_INT
-	default 6
-
-config ZMK_SPLIT_BLE_PREF_LATENCY
-	default 399
-
-config ZMK_SPLIT_BLE_PREF_TIMEOUT
-	default 900
-
+	config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+		default 2
 endif
