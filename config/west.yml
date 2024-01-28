@@ -2,16 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: kuolemax
-      url-base: https://github.com/kuolemax
+    - name: fujisheng
+      url-base: https://github.com/fujisheng
   projects:
-    # - name: zmk
-    #   remote: kuolemax
-    #   revision: encoder-fix
-    #   import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: fujisheng
+      revision: adv360-z3.2-2
+    # - name: zmk
+    #   remote: zmkfirmware
+    #   revision: main
       import: app/west.yml
   self:
     path: config
