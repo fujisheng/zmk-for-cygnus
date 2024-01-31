@@ -1,3 +1,3 @@
 ## zmk-for-cygnus   
-cygnus nice!nano with dongle zmk config
+zmk config for cygnus with dongle, use 3 nice!nano
 
