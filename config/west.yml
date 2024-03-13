@@ -5,7 +5,7 @@ manifest:
     - name: fujisheng
       url-base: https://github.com/fujisheng
   projects:
-    - name: zmk_ReFil
+    - name: zmk
       remote: fujisheng
       revision: adv360-z3.2-2
     # - name: zmk
